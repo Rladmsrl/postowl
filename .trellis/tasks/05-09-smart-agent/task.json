@@ -1,0 +1,32 @@
+{
+  "id": "smart-agent",
+  "name": "smart-agent",
+  "title": "智能邮件代理增强：分层记忆、自进化规则、工作记忆",
+  "description": "",
+  "status": "in_progress",
+  "dev_type": null,
+  "scope": null,
+  "package": null,
+  "priority": "P2",
+  "creator": "zhengru",
+  "assignee": "zhengru",
+  "createdAt": "2026-05-09",
+  "completedAt": null,
+  "branch": null,
+  "base_branch": "main",
+  "worktree_path": null,
+  "commit": null,
+  "pr_url": null,
+  "subtasks": [],
+  "children": [
+    "05-09-memory-layers",
+    "05-09-two-phase-rag",
+    "05-09-working-memory",
+    "05-09-failure-escalation",
+    "05-09-self-evolving-rules"
+  ],
+  "parent": null,
+  "relatedFiles": [],
+  "notes": "",
+  "meta": {}
+}

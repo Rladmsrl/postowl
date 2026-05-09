@@ -1,0 +1,33 @@
+{
+  "id": "email-enhancement",
+  "name": "email-enhancement",
+  "title": "邮件处理增强：IDLE推送、并行处理、Listener引擎、Prompt优化",
+  "description": "",
+  "status": "in_progress",
+  "dev_type": null,
+  "scope": null,
+  "package": null,
+  "priority": "P2",
+  "creator": "zhengru",
+  "assignee": "zhengru",
+  "createdAt": "2026-05-09",
+  "completedAt": null,
+  "branch": null,
+  "base_branch": "main",
+  "worktree_path": null,
+  "commit": null,
+  "pr_url": null,
+  "subtasks": [],
+  "children": [
+    "05-09-prompt-enhance",
+    "05-09-unify-pipeline",
+    "05-09-headers-only",
+    "05-09-parallel-process",
+    "05-09-imap-idle",
+    "05-09-listener-engine"
+  ],
+  "parent": null,
+  "relatedFiles": [],
+  "notes": "",
+  "meta": {}
+}

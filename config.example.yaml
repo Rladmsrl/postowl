@@ -1,0 +1,25 @@
+# PostOwl Configuration
+# Copy to ~/.postowl/config.yaml
+
+llm:
+  base_url: "https://api.openai.com/v1"   # Any OpenAI-compatible API
+  api_key: "sk-xxx"
+  chat_model: "gpt-4o-mini"
+  temperature: 0.3
+  max_tokens: 2048
+
+embedding:
+  base_url: "https://api.openai.com/v1"   # Can differ from LLM provider
+  api_key: "sk-xxx"                        # Can differ from LLM key
+  model: "text-embedding-3-small"
+
+telegram:
+  bot_token: "123456:ABC-DEF"
+  allowed_user_ids: []  # Empty = allow all, or [123456, 789012]
+
+scheduler:
+  fetch_interval_minutes: 10
+  reminder_check_interval_seconds: 60
+  max_workers: 4
+  use_idle: true
+  idle_reconnect_interval_seconds: 300

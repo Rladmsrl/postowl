@@ -1,0 +1,32 @@
+[project]
+name = "postowl"
+version = "0.1.0"
+description = "Smart email agent with RAG - auto-classify, summarize, and query your emails via CLI & Telegram"
+readme = "README.md"
+authors = [
+    { name = "正如", email = "mail@bzr.ink" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "apscheduler>=3.11.2",
+    "beautifulsoup4>=4.14.3",
+    "chromadb>=0.6",
+    "imapclient>=3.1.0",
+    "keyring>=25.7.0",
+    "onnxruntime>=1.20,<1.26",
+    "openai>=2.36.0",
+    "pydantic>=2.13.4",
+    "pydantic-settings>=2.14.1",
+    "python-dateutil>=2.9.0.post0",
+    "python-telegram-bot>=22.7",
+    "pyyaml>=6.0.3",
+    "rich>=15.0.0",
+    "typer>=0.25.1",
+]
+
+[project.scripts]
+postowl = "postowl.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
