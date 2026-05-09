@@ -4,6 +4,23 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 For full development guide including code conventions, extension patterns, and troubleshooting, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
+## ⚠️ 这是一个公开的开源项目
+
+**每次 git push 之前，必须检查以下隐私项：**
+
+1. **API Key / Token** — 不得出现在代码或配置文件中（`sk-`、`AIza`、bot token 等）。所有密钥只能在 `~/.postowl/config.yaml` 中，该文件已被 `.gitignore` 排除
+2. **邮箱地址 / 密码** — 用户的真实邮箱地址、IMAP 密码、授权码不得出现在任何被追踪的文件中
+3. **Telegram User ID** — 不得硬编码真实用户 ID，示例中使用 `your_user_id`
+4. **个人信息** — 不得包含真实姓名关联的私人邮箱地址（项目署名邮箱 `mail@bzr.ink` 除外）
+
+**检查命令：**
+```bash
+# 扫描所有追踪文件中的敏感信息
+grep -rn "sk-[a-zA-Z0-9]\{10,\}\|AIza[a-zA-Z0-9]\{30,\}\|noreply\|授权码" --include="*.py" --include="*.md" --include="*.yaml" --include="*.json" .
+# 检查 git diff 中是否有密钥
+git diff --cached | grep -iE "api_key|password|token|secret"
+```
+
 ## Project Overview
 
 PostOwl is a smart email agent that fetches emails via IMAP, classifies and summarizes them using an OpenAI-compatible LLM, indexes them in a vector store for RAG Q&A, and exposes functionality through both a CLI (Typer) and a Telegram bot. Batch summaries and RAG responses default to Chinese (中文).
